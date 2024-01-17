@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '076c9449-f0fe-463d-8570-6daed2c27065'
+  azureSubscription: 'bcfa1482-a455-49dc-95c9-1ad2e9bf52c6'
 
   # Web app name
-  webAppName: 'mySuperAwesomeApp'
+  webAppName: 'Montyapp'
 
   # Environment name
-  environmentName: 'mySuperAwesomeApp'
+  environmentName: 'Montyapp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
