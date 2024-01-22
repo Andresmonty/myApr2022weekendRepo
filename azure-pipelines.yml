@@ -9,13 +9,13 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'bcfa1482-a455-49dc-95c9-1ad2e9bf52c6'
+  azureSubscription: 'e0a74946-c219-4ee5-a78a-2a041065925b'
 
   # Web app name
-  webAppName: 'Montyapp'
+  webAppName: 'MyMontyWebApp'
 
   # Environment name
-  environmentName: 'Montyapp'
+  environmentName: 'MyMontyWebApp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -33,7 +33,7 @@ stages:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
-        mavenPomFile: 'MyWebApp/pom.xml'
+        mavenPomFile: 'MywebApp/pom.xml'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
@@ -60,7 +60,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: mySuperAwesomeApp'
+            displayName: 'Azure Web App Deploy: MyMontyWebApp'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
